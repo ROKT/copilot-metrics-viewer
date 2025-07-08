@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: "Copilot Metrics Viewer"
+  x-cortex-tag: "copilot-metrics-viewer"
+  x-cortex-type: infra
+  description: |
+    This application displays a set of charts with various metrics related to GitHub Copilot for your GitHub Organization or Enterprise Account.
+  x-cortex-git:
+    github:
+      repository: "ROKT/copilot-metrics-viewer"
+      basepath: "copilot-metrics-viewer"
+  x-cortex-owners:
+    - type: group
+      name: "rokt-global-infrastructure"
+      provider: CORTEX
+  x-cortex-groups:
+    - "lang-bicep"
+  x-cortex-oncall:
+    opsgenie:
+      type: SCHEDULE
+      id: "Rokt Global Infrastructure Build and Release_schedule"
