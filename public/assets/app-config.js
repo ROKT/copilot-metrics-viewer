@@ -4,7 +4,8 @@ window._ENV_ = {
   VUE_APP_SCOPE: "${VUE_APP_SCOPE}",
   VUE_APP_GITHUB_ORG: "${VUE_APP_GITHUB_ORG}",
   VUE_APP_GITHUB_ENT: "${VUE_APP_GITHUB_ENT}",
-  VUE_APP_GITHUB_TOKEN: "${VUE_APP_GITHUB_TOKEN}",
+  // Never substitute or expose secrets in client-side config.
+  VUE_APP_GITHUB_TOKEN: "",
   VUE_APP_GITHUB_API: "${VUE_APP_GITHUB_API}",
   VUE_APP_GITHUB_TEAM: "${VUE_APP_GITHUB_TEAM}",
 };
