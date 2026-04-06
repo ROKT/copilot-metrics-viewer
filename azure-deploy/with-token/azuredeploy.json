@@ -13,12 +13,6 @@
                 "description": "The Azure Container App Location"
             }
         },
-        "github-pat-token": {
-            "type": "SecureString",
-            "metadata": {
-                "description": "GitHub PAT token with manage_billing:copilot for ORGs or PAT (classic) with manage_billing:copilot or read:enterprise scopes for Enterprise"
-            }
-        },
         "github-organization": {
             "type": "string",
             "defaultValue": "",
@@ -104,10 +98,6 @@
                                 {
                                     "name": "VUE_APP_GITHUB_ENT",
                                     "value": "[parameters('github-enterprise')]"
-                                },
-                                {
-                                    "name": "VUE_APP_GITHUB_TOKEN",
-                                    "value": "[parameters('github-pat-token')]"
                                 },
                                 {
                                     "name": "SESSION_SECRET",
