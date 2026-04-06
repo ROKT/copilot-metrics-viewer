@@ -22,15 +22,9 @@ app.use(session({
 
 // Middleware to add Authorization header
 const authMiddleware = (req, res, next) => {
-  // not ideal but if someone wanted to use hardcoded token on the backend
-  if (!req.session.token && !process.env.VUE_APP_GITHUB_TOKEN) {
+  if (!req.session.token) {
     res.status(401).send('Unauthorized');
     return;
-  }
-
-  if (process.env.VUE_APP_GITHUB_TOKEN) {
-    // Use the hardcoded token if it's available
-    req.session.token = process.env.VUE_APP_GITHUB_TOKEN;
   }
 
   req.headers['Authorization'] = `Bearer ${req.session.token}`;
